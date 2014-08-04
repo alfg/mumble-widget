@@ -1,3 +1,11 @@
+/*
+ *  mumble-script.js - v0.0.1
+ *	Mumble Channel Viewer.
+ *
+ *  Created by Alfred Gutierrez
+ *  Under MIT License
+ *  http://github.com/alfg/mumble-script
+ */
 
 /* Tables */
 #mumble-script-container table { display: table; background-color: white; border-collapse: collapse; border-spacing: 0; margin-bottom: 20px; width: 100%; border: 1px solid #e5e5e5; }
@@ -6,6 +14,8 @@
 #mumble-script-container table tr td, #mumble-script-container table tbody tr td { font-size: 16px; }
 #mumble-script-container table tr td:first-child { font-weight: bold; }
 #mumble-script-container table thead { background-color: #3085d6; color: #fff; }
+#mumble-script-container table thead a { color: #fff; text-decoration: none; }
+#mumble-script-container table thead a:hover { text-decoration: underline; }
 #mumble-script-container table thead tr th { font-size: 16px; font-weight: bold; vertical-align: bottom; }
 #mumble-script-container table.striped tr:nth-of-type(even), #mumble-script-container table table tr.stripe, #mumble-script-container table table tr.striped { background-color: #e5e5e5; }
 #mumble-script-container table.rounded { border-radius: 4px; border-collapse: separate; }

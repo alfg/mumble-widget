@@ -1,0 +1,37 @@
+{
+	"name": "mumble-script",
+	"title": "mumble-script",
+	"description": "Mumble Channel Viewer Widget",
+	"keywords": [
+		"mumble",
+		"cvp",
+		"channel viewer",
+    "widget"
+	],
+	"version": "0.0.1",
+	"author": {
+		"name": "Alfred Gutierrez",
+		"email": "alf.g.jr@gmail.com",
+		"url": "https://github.com/alfg"
+	},
+	"maintainers": [
+		{
+			"name": "Alfred Gutierrez",
+			"email": "alf.g.jr@gmail.com",
+			"url": "https://github.com/alfg"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://alfg.mit-license.org/"
+		}
+	],
+	"bugs": "https://github.com/alfg/mumble-script/issues",
+	"homepage": "http://github.com/alfg/mumble-script",
+	"docs": "https://github.com/alfg/mumble-script#readme",
+	"download": "https://github.com/alfg/mumble-script/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=2.0"
+	}
+}
