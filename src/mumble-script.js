@@ -1,12 +1,3 @@
-/*
- *  mumble-script.js - v0.0.1
- *	Mumble Channel Viewer.
- *
- *  Created by Alfred Gutierrez
- *  Under MIT License
- *  http://github.com/alfg/mumble-script
- */
-
 (function () {
 
     // Localize jQuery variable
@@ -77,22 +68,30 @@
 
             /******* Load HTML *******/
             var html = "<table class='mumble-script-widget rounded centered' data-bind='with: cvp'><thead> \
-                <tr><th><a href='#' data-bind='text: name, attr: { href: x_connecturl }'></a></th></tr> \
+                <tr data-bind='ifnot: $data.code'><th><a href='#' data-bind='text: name, attr: { href: x_connecturl }'></a></th></tr> \
+                <tr data-bind='if: $data.code'><th>Not Found</th></tr> \
                 </thead><tbody> \
-                <!-- ko foreach: root.users --> \
-                <tr><td data-bind='text: name'></td></tr> \
+                <!-- ko ifnot: $data.code --> \
+                  <!-- ko foreach: root.users --> \
+                  <tr><td data-bind='text: name'></td></tr> \
+                  <!-- /ko --> \
+                  <!-- ko foreach: root.channels --> \
+                    <!-- ko if: users.length > 0 --> \
+                    <tr class='subchannels'><td data-bind='text: name'></td></tr> \
+                    <!-- /ko --> \
+                    <!-- ko foreach: users --> \
+                    <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
+                    <!-- /ko --> \
+                  <!-- /ko --> \
+                  <!-- ko if: root.users.length == 0 --> \
+                  <tr><td>No users are online</td></tr> \
+                  <!-- /ko --> \
                 <!-- /ko --> \
-                <!-- ko foreach: root.channels --> \
-                <!-- ko if: users.length > 0 --> \
-                <tr class='subchannels'><td data-bind='text: name'></td></tr> \
+                \
+                <!-- ko if: $data.code --> \
+                <tr><td>Unable to load</td></tr> \
                 <!-- /ko --> \
-                <!-- ko foreach: users --> \
-                <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
-                <!-- /ko --> \
-                <!-- /ko --> \
-                <!-- ko if: root.users.length == 0 --> \
-                <tr><td>No users are online</td></tr> \
-                <!-- /ko --> \
+                \
                 </tbody></table>";
 
             $("#mumble-script-container").html(html);
@@ -112,8 +111,8 @@
                         url: jsonpUrl,
                         async: false,
                         dataType: "jsonp",
-                        success: function (json) {
-                            data = json;
+                        success: function (data) {
+                            console.log(data);
                             self.cvp(data);
                         }
                     });
