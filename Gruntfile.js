@@ -19,9 +19,13 @@ module.exports = function(grunt) {
 
 		// Concat definitions
 		concat: {
-			dist: {
+			js: {
 				src: ["src/mumble-script.js"],
 				dest: "dist/mumble-script.js"
+			},
+			css: {
+				src: ["src/mumble-script.css"],
+				dest: "dist/mumble-script.css"
 			},
 			options: {
 				banner: "<%= meta.banner %>"
@@ -45,15 +49,36 @@ module.exports = function(grunt) {
 			options: {
 				banner: "<%= meta.banner %>"
 			}
-		}
+		},
+
+    // CSS Minify
+    cssmin: {
+      minify: {
+        src: "dist/mumble-script.css",
+        dest: 'dist/mumble-script.min.css'
+      },
+			options: {
+				banner: "<%= meta.banner %>"
+			}
+    },
+
+    // Copy Template to dist
+    copy: {
+      main: {
+        src: 'src/template.html',
+        dest: 'dist/template.html',
+      },
+    }
 
 	});
 
 	grunt.loadNpmTasks("grunt-contrib-concat");
 	grunt.loadNpmTasks("grunt-contrib-jshint");
 	grunt.loadNpmTasks("grunt-contrib-uglify");
+	grunt.loadNpmTasks("grunt-contrib-cssmin");
+	grunt.loadNpmTasks("grunt-contrib-copy");
 
-	grunt.registerTask("default", ["jshint", "concat", "uglify"]);
+	grunt.registerTask("default", ["jshint", "concat", "uglify", "cssmin", "copy"]);
 	grunt.registerTask("travis", ["jshint"]);
 
 };

@@ -1,0 +1,28 @@
+<table class="mumble-script-widget rounded centered" data-bind="with: cvp">
+  <thead>
+    <tr data-bind="ifnot: $data.code"><th><a href="#" data-bind="text: name, attr: { href: x_connecturl }"></a></th></tr>
+    <tr data-bind="if: $data.code"><th>Not Found</th></tr>
+  </thead>
+  <tbody>
+    <!-- ko ifnot: $data.code -->
+      <!-- ko foreach: root.users -->
+      <tr><td data-bind='text: name'></td></tr>
+      <!-- /ko -->
+      <!-- ko foreach: root.channels -->
+        <!-- ko if: users.length > 0 -->
+        <tr class="subchannels"><td data-bind="text: name"></td></tr>
+        <!-- /ko -->
+        <!-- ko foreach: users -->
+        <tr><td data-bind="text: '&mdash; '  + name"></td></tr>
+        <!-- /ko -->
+      <!-- /ko -->
+      <!-- ko if: root.users.length == 0 -->
+      <tr><td>No users are online</td></tr>
+      <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko if: $data.code -->
+    <tr><td>Unable to load</td></tr>
+    <!-- /ko -->
+    </tbody>
+</table>

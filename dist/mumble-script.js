@@ -47,6 +47,8 @@
         // Restore $ and window.jQuery to their previous values and store the
         // new jQuery in our local jQuery variable
         jQuery = window.jQuery.noConflict(true);
+        jQuery.ajaxSetup({async:false});
+
         // Call our main function
         main();
     }
@@ -75,7 +77,12 @@
             var jsonpUrl = host;
 
             /******* Load HTML *******/
-            var html = "<table class='mumble-script-widget rounded centered' data-bind='with: cvp'><thead> \
+            var html;
+            $.get("../src/template.html", function(data) {
+              html = data;
+              $("#mumble-script-container").html(html);
+            });
+            var html2 = "<table class='mumble-script-widget rounded centered' data-bind='with: cvp'><thead> \
                 <tr data-bind='ifnot: $data.code'><th><a href='#' data-bind='text: name, attr: { href: x_connecturl }'></a></th></tr> \
                 <tr data-bind='if: $data.code'><th>Not Found</th></tr> \
                 </thead><tbody> \
@@ -102,7 +109,6 @@
                 \
                 </tbody></table>";
 
-            $("#mumble-script-container").html(html);
 
 
             // Knockout Users ViewModel for displaying and updating users online
