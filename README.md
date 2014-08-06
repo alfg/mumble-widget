@@ -1,6 +1,6 @@
 work-in-progress
 
-# Mumble-script
+# Mumble-widget
 Mumble Channel Viewer widget
 
 ## Usage

@@ -1,7 +1,7 @@
 /*
- *  mumble-script - v0.0.1
+ *  mumble-widget - v0.0.1
  *  Mumble Channel Viewer Widget
- *  http://github.com/alfg/mumble-script
+ *  http://github.com/alfg/mumble-widget
  *
  *  Made by Alfred Gutierrez
  *  Under MIT License

@@ -1,6 +1,6 @@
 {
-	"name": "mumble-script",
-	"title": "mumble-script",
+	"name": "mumble-widget",
+	"title": "mumble-widget",
 	"description": "Mumble Channel Viewer Widget",
 	"keywords": [
 		"mumble",
@@ -27,10 +27,10 @@
 			"url": "http://alfg.mit-license.org/"
 		}
 	],
-	"bugs": "https://github.com/alfg/mumble-script/issues",
-	"homepage": "http://github.com/alfg/mumble-script",
-	"docs": "https://github.com/alfg/mumble-script#readme",
-	"download": "https://github.com/alfg/mumble-script/archive/master.zip",
+	"bugs": "https://github.com/alfg/mumble-widget/issues",
+	"homepage": "http://github.com/alfg/mumble-widget",
+	"docs": "https://github.com/alfg/mumble-widget#readme",
+	"download": "https://github.com/alfg/mumble-widget/archive/master.zip",
 	"dependencies": {
 		"jquery": ">=2.0"
 	}

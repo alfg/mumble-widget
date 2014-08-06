@@ -1,5 +1,5 @@
 {
-  "name": "mumble-script",
+  "name": "mumble-widget",
   "description": "Mumble Channel Viewer Widget",
   "version": "0.0.1",
   "author": "Alf <alf.g.jr@gmail.com>",
@@ -16,5 +16,5 @@
     "test": "grunt travis --verbose"
   },
   "keywords": ["mumble", "cvp", "channel viewer"],
-  "repository": "git://github.com/alfg/mumble-script"
+  "repository": "git://github.com/alfg/mumble-widget"
 }

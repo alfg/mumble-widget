@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 
 		// Import package manifest
-		pkg: grunt.file.readJSON("mumble-script.json"),
+		pkg: grunt.file.readJSON("mumble-widget.json"),
 
 		// Banner definitions
 		meta: {
@@ -20,12 +20,12 @@ module.exports = function(grunt) {
 		// Concat definitions
 		concat: {
 			js: {
-				src: ["src/mumble-script.js"],
-				dest: "dist/mumble-script.js"
+				src: ["src/mumble-widget.js"],
+				dest: "dist/mumble-widget.js"
 			},
 			css: {
-				src: ["src/mumble-script.css"],
-				dest: "dist/mumble-script.css"
+				src: ["src/mumble-widget.css"],
+				dest: "dist/mumble-widget.css"
 			},
 			options: {
 				banner: "<%= meta.banner %>"
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 
 		// Lint definitions
 		jshint: {
-			files: ["src/mumble-script.js"],
+			files: ["src/mumble-widget.js"],
 			options: {
 				jshintrc: ".jshintrc"
 			}
@@ -43,8 +43,8 @@ module.exports = function(grunt) {
 		// Minify definitions
 		uglify: {
 			my_target: {
-				src: ["dist/mumble-script.js"],
-				dest: "dist/mumble-script.min.js"
+				src: ["dist/mumble-widget.js"],
+				dest: "dist/mumble-widget.min.js"
 			},
 			options: {
 				banner: "<%= meta.banner %>"
@@ -54,8 +54,8 @@ module.exports = function(grunt) {
     // CSS Minify
     cssmin: {
       minify: {
-        src: "dist/mumble-script.css",
-        dest: 'dist/mumble-script.min.css'
+        src: "dist/mumble-widget.css",
+        dest: 'dist/mumble-widget.min.css'
       },
 			options: {
 				banner: "<%= meta.banner %>"
