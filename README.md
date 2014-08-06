@@ -12,10 +12,22 @@ There are two methods of installation, depending if you are self-hosting the scr
 
 ### Self-Hosted
 
-Self-hosted is for those who would like to have control of the sourcecode and/or customize the template or widget itself.
+Self-hosted is for those who would like to have control of the source code and/or customize the template or widget itself.
 
 1. Download contents in /dist folder.
-2. Use sample in demo/index.html as an example to integrate into your website
+2. Add the following snippet where you want the widget to load: 
+
+```html
+    <script class="mumble-widget" src="../src/mumble-widget.js" type="text/javascript"
+      data-width="400"
+      data-source="http://guildbit.com/server/cvp/aec4afa2-d777-43e9-8ca5-41bc70d00877/json/?callback=callback"></script>
+    <div id="mumble-widget-container"></div>
+```
+
+Parameters:
+- `data-width` - The width (pixels) of the widget and data
+- `data-source` - The path to the CVP JSONP Source of your Mumble hosting provider (if not using GuildBit)
+- `data-key` - (not shown) The CVP Key if using GuildBit as your Mumble Hosting (in this case, you do not need to include    the `data-source` attribute.
 
 ### Hosted
 
