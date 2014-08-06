@@ -12,10 +12,14 @@ There are two methods of installation, depending if you are self-hosting the scr
 
 ### Self-Hosted
 
+Self-hosted is for those who would like to have control of the sourcecode and/or customize the template or widget itself.
+
 1. Download contents in /dist folder.
 2. Use sample in demo/index.html as an example to integrate into your website
 
 ### Hosted
+
+Hosted is for those who don't necessarily want to bother setting up the script. This method is meant to be simplified and serves the files over a [Content Delivery Network (CDN)](http://en.wikipedia.org/wiki/Content_delivery_network).
 
 1. Visit http://mumble-widget.guildbit.com to generate your script.
 2. Copy and paste the code snippet into your website where you want the widget to load.
