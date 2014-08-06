@@ -56,19 +56,23 @@
     /******** Our main function ********/
     function main() {
         jQuery(document).ready(function ($) {
-            var cvpKey = $(".mumble-script").data("key");
-            var width = $(".mumble-script").data("width") || 500;
-            var host = $(".mumble-script").data("source") || "http://guildbit.com/server/cvp/" + cvpKey + "/json/?callback=?";
+            var cvpKey = $(".mumble-widget").data("key");
+            var width = $(".mumble-widget").data("width") || 500;
+            var host = $(".mumble-widget").data("source") || "http://guildbit.com/server/cvp/" + cvpKey + "/json/?callback=?";
+
+            // Asset Sources
+            var cssSource = "../src/mumble-widget.css";
+            var tmplSource = "../src/template.html";
 
             // Set container width
-            $("#mumble-script-container").width(width);
+            $("#mumble-widget-container").width(width);
 
 
             /******* Load CSS *******/
             var css_link = $("<link>", {
                 rel: "stylesheet",
                 type: "text/css",
-                href: "../src/mumble-script.css" // change this to cdn
+                href: cssSource
             });
             css_link.appendTo("head");
 
@@ -78,38 +82,10 @@
 
             /******* Load HTML *******/
             var html;
-            $.get("../src/template.html", function(data) {
+            $.get(tmplSource, function(data) {
               html = data;
-              $("#mumble-script-container").html(html);
+              $("#mumble-widget-container").html(html);
             });
-            var html2 = "<table class='mumble-script-widget rounded centered' data-bind='with: cvp'><thead> \
-                <tr data-bind='ifnot: $data.code'><th><a href='#' data-bind='text: name, attr: { href: x_connecturl }'></a></th></tr> \
-                <tr data-bind='if: $data.code'><th>Not Found</th></tr> \
-                </thead><tbody> \
-                <!-- ko ifnot: $data.code --> \
-                  <!-- ko foreach: root.users --> \
-                  <tr><td data-bind='text: name'></td></tr> \
-                  <!-- /ko --> \
-                  <!-- ko foreach: root.channels --> \
-                    <!-- ko if: users.length > 0 --> \
-                    <tr class='subchannels'><td data-bind='text: name'></td></tr> \
-                    <!-- /ko --> \
-                    <!-- ko foreach: users --> \
-                    <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
-                    <!-- /ko --> \
-                  <!-- /ko --> \
-                  <!-- ko if: root.users.length == 0 --> \
-                  <tr><td>No users are online</td></tr> \
-                  <!-- /ko --> \
-                <!-- /ko --> \
-                \
-                <!-- ko if: $data.code --> \
-                <tr><td>Unable to load</td></tr> \
-                <!-- /ko --> \
-                \
-                </tbody></table>";
-
-
 
             // Knockout Users ViewModel for displaying and updating users online
             function CvpViewModel() {
