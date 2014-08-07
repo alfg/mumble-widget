@@ -32,14 +32,23 @@
 
         <section id="main_content">
           <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="mumble-widget" class="anchor" href="#mumble-widget"><span class="octicon octicon-link"></span></a>Mumble-widget</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>Mumble-widget is a web-based channel viewer widget to display active users on your Mumble server.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p>Add the following snippet where you want the widget to load on your website:</p>
+
+<pre><code>&lt;script class="mumble-widget"
+    src="//s3.amazonaws.com/guildbit-public/dist/mumble-widget/mumble-widget.min.js"
+    type="text/javascript"
+    data-key="45ec53ec-201f-40a4-bcc5-1b6440067fe9"
+    data-width="400"&gt;&lt;/script&gt;
+&lt;div id="mumble-widget-container"&gt;&lt;/div&gt;
 </code></pre>
+
+<p>Just replace <code>data-key</code> with your Guildbit CVP key.</p>
+
+<p><img src="http://f.cl.ly/items/2F341T3Y45433x1R2w2Z/Screenshot%202014-08-06%2018.28.17.png" alt="Widget"></p>
         </section>
 
         <footer>
