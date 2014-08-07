@@ -23,6 +23,10 @@ module.exports = function(grunt) {
 				src: ["src/mumble-widget.js"],
 				dest: "dist/mumble-widget.js"
 			},
+			cdnjs: {
+				src: ["src/mumble-widget.cdn.js"],
+				dest: "dist/mumble-widget.cdn.js"
+			},
 			css: {
 				src: ["src/mumble-widget.css"],
 				dest: "dist/mumble-widget.css"
@@ -34,7 +38,7 @@ module.exports = function(grunt) {
 
 		// Lint definitions
 		jshint: {
-			files: ["src/mumble-widget.js"],
+			files: ["src/mumble-widget.js", "src/mumble-widget.cdn.js"],
 			options: {
 				jshintrc: ".jshintrc"
 			}
@@ -45,6 +49,10 @@ module.exports = function(grunt) {
 			my_target: {
 				src: ["dist/mumble-widget.js"],
 				dest: "dist/mumble-widget.min.js"
+			},
+			cdnjs: {
+				src: ["dist/mumble-widget.cdn.js"],
+				dest: "dist/mumble-widget.cdn.min.js"
 			},
 			options: {
 				banner: "<%= meta.banner %>"
