@@ -40,7 +40,7 @@
         var knockout_link = $("<script>", {
             rel: "stylesheet",
             type: "text/javascript",
-            src: "http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"
+            src: "//cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"
         });
         knockout_link.appendTo("head");
 

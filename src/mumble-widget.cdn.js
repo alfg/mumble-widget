@@ -32,7 +32,7 @@
         var knockout_link = $("<script>", {
             rel: "stylesheet",
             type: "text/javascript",
-            src: "http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"
+            src: "//cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"
         });
         knockout_link.appendTo("head");
 
@@ -53,7 +53,7 @@
             var host = $(".mumble-widget").data("source") || "http://guildbit.com/server/cvp/" + cvpKey + "/json/?callback=?";
 
             // Asset Sources
-            var cssSource = "https://s3.amazonaws.com/guildbit-public/dist/mumble-widget/mumble-widget.min.css";
+            var cssSource = "//s3.amazonaws.com/guildbit-public/dist/mumble-widget/mumble-widget.min.css";
 
             // Set container width
             $("#mumble-widget-container").width(width);
