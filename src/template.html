@@ -16,7 +16,7 @@
         <tr><td data-bind="text: '&mdash; '  + name"></td></tr>
         <!-- /ko -->
       <!-- /ko -->
-      <!-- ko if: root.users.length == 0 -->
+      <!-- ko if: $root.userCount() == 0 -->
       <tr><td>No users are online</td></tr>
       <!-- /ko -->
     <!-- /ko -->
@@ -24,5 +24,6 @@
     <!-- ko if: $data.code -->
     <tr><td>Unable to load</td></tr>
     <!-- /ko -->
+
     </tbody>
 </table>

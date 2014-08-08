@@ -95,7 +95,7 @@
                     <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
                     <!-- /ko --> \
                   <!-- /ko --> \
-                  <!-- ko if: root.users.length == 0 --> \
+                  <!-- ko if: $root.userCount() == 0 --> \
                   <tr><td>No users are online</td></tr> \
                   <!-- /ko --> \
                 <!-- /ko --> \
@@ -113,6 +113,7 @@
 
                 // Observables
                 self.cvp = ko.observable(loadCvpData());
+                self.userCount = ko.observable();
 
                 // Load initial data into cvp observable, then set an interval
                 function loadCvpData() {
@@ -124,8 +125,18 @@
                         success: function (data) {
                             console.log(data);
                             self.cvp(data);
+                            self.userCount(countUsers(data));
                         }
                     });
+                }
+
+                function countUsers(data) {
+                  var count = data.root.users.length;
+                  for (i = 0; i < data.root.channels.length; i++) {
+                    var users = data.root.channels[i].users.length;
+                    count += users;
+                  }
+                  return count;
                 }
 
                 // Update CVP data every 15s
