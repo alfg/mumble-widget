@@ -50,7 +50,7 @@
         jQuery(document).ready(function ($) {
             var cvpKey = $(".mumble-widget").data("key");
             var width = $(".mumble-widget").data("width") || 500;
-            var host = $(".mumble-widget").data("source") || "http://guildbit.com/server/cvp/" + cvpKey + "/json/?callback=?";
+            var host = $(".mumble-widget").data("source") || "//guildbit.com/server/cvp/" + cvpKey + "/json/?callback=?";
 
             // Asset Sources
             var cssSource = "//dqc3ygqu0f1ud.cloudfront.net/dist/mumble-widget/mumble-widget.min.css";
