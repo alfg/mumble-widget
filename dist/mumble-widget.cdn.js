@@ -61,7 +61,7 @@
             var host = $(".mumble-widget").data("source") || "http://guildbit.com/server/cvp/" + cvpKey + "/json/?callback=?";
 
             // Asset Sources
-            var cssSource = "//s3.amazonaws.com/guildbit-public/dist/mumble-widget/mumble-widget.min.css";
+            var cssSource = "//dqc3ygqu0f1ud.cloudfront.net/dist/mumble-widget/mumble-widget.min.css";
 
             // Set container width
             $("#mumble-widget-container").width(width);
