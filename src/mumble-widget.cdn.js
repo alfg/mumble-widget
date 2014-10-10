@@ -29,20 +29,17 @@
     /******** Called once jQuery has loaded ******/
     function scriptLoadHandler() {
         /******* Load Knockout *******/
-        var knockout_link = $("<script>", {
-            rel: "stylesheet",
-            type: "text/javascript",
-            src: "//cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"
+        $.getScript("//cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js", function() {
+          console.log("Loading knockout.js...");
+
+          // Call our main function
+          main();
         });
-        knockout_link.appendTo("head");
 
         // Restore $ and window.jQuery to their previous values and store the
         // new jQuery in our local jQuery variable
         jQuery = window.jQuery.noConflict(true);
         jQuery.ajaxSetup({async:false});
-
-        // Call our main function
-        main();
     }
 
     /******** Our main function ********/
