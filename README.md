@@ -4,7 +4,7 @@ Mumble-widget is a web-based channel viewer widget to display active users on yo
 
 The project's goal is to have a clean and customizable design, simple installation and to support any host utilizing the [Channel Viewer Protocol](http://mumble.sourceforge.net/Channel_Viewer_Protocol).
 
-This project is a work-in-progress, but feel free to contribute!
+JS Fiddle example: http://jsfiddle.net/alfg/3m86purL/
 
 ## Usage
 
