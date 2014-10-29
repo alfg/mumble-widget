@@ -6,9 +6,24 @@ The project's goal is to have a clean and customizable design, simple installati
 
 JS Fiddle example: http://jsfiddle.net/alfg/3m86purL/
 
+## Supported Hosts
+
+The following are a list of compatible hosts implementing the [Channel Viewer Protocol](http://mumble.sourceforge.net/Channel_Viewer_Protocol). Feel free to add hosts to this list and a JSFiddle example of the script working.
+
+| Host  | Compatible?  | JSFiddle Demo  |
+|---|---|---|
+| [GuildBit](http://guildbit.com) | YES | http://jsfiddle.net/alfg/3m86purL/  |
+
 ## Usage
 
 There are two methods of installation, depending if you are self-hosting the script or using the hosted version.
+
+### Hosted
+
+Hosted is for those who don't necessarily want to bother setting up the script. This method is meant to be simplified and serves the files over a [Content Delivery Network (CDN)](http://en.wikipedia.org/wiki/Content_delivery_network).
+
+1. Visit http://mumble-widget.guildbit.com to generate your script.
+2. Copy and paste the code snippet into your website where you want the widget to load.
 
 ### Self-Hosted
 
@@ -29,13 +44,6 @@ Parameters:
 - `data-source` - The path to the CVP JSONP Source of your Mumble hosting provider (if not using GuildBit)
 - `data-key` - (not shown) The CVP Key if using GuildBit as your Mumble Hosting (in this case, you do not need to include    the `data-source` attribute.
 
-### Hosted
-
-Hosted is for those who don't necessarily want to bother setting up the script. This method is meant to be simplified and serves the files over a [Content Delivery Network (CDN)](http://en.wikipedia.org/wiki/Content_delivery_network).
-
-1. Visit http://mumble-widget.guildbit.com to generate your script.
-2. Copy and paste the code snippet into your website where you want the widget to load.
-
 ## Development
 
 Mumble-widget is built with [jQuery](http://jquery.com), [Knockout.js](http://knockoutjs.com) and uses [Grunt](http://gruntjs.com) for validating, linting, and minifying/uglifying code output. Install using the instructions below:
@@ -53,7 +61,6 @@ Mumble-widget is built with [jQuery](http://jquery.com), [Knockout.js](http://kn
 ## Notes
 
 - Project is in early development and may have code breaking changes through early version updates
-- Support is limited to Guildbit servers for the time being, but will support other hosts in the near future
 
 ## License
 
