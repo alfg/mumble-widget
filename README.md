@@ -14,13 +14,13 @@ The following are a list of compatible hosts implementing the [Channel Viewer Pr
 |---|---|---|
 | [GuildBit](http://guildbit.com) | YES | http://jsfiddle.net/alfg/3m86purL/  |
 | [Mumble.com](http://www.mumble.com/)  |  YES  |  http://jsfiddle.net/alfg/z2qf81d6/ |
+| [GotMumble](http://www.gotmumble.com/)  |  YES  | http://jsfiddle.net/alfg/3krr8pp1/  |
 | [TypeFrag](http://www.typefrag.com/services/mumble-hosting/)  |  ???  |   |
 | [MumbleBoxes](https://www.mumbleboxes.com/)  |  ???  |   |
 | [MyMumble](https://www.mymumble.com/)  |  ???  |   |
 | [GameServers](https://www.gameservers.com/mumble_murmur/)  |  ???  |   |
 | [CommandChannel](https://commandchannel.com/)  |  ???  |   |
 | [MMO-Mumble](https://mmo-mumble.com/)  |  ???  |   |
-| [GotMumble](http://www.gotmumble.com/)  |  ???  |   |
 | [MumbleMe](https://www.mumbleme.com/)  | ??? |   |
 
 
