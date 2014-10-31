@@ -81,37 +81,42 @@
                 var self = this;
 
                 // Observables
-                self.cvp = ko.observable(loadCvpData());
+                self.cvp = ko.observable();
                 self.userCount = ko.observable();
 
                 // Load initial data into cvp observable, then set an interval
-                function loadCvpData() {
+                var loadCvpData = function() {
                     var data = {};
                     $.ajax({
                         url: jsonpUrl,
-                        async: false,
+                        async: true,
                         dataType: "jsonp",
                         success: function (data) {
                             console.log(data);
                             self.cvp(data);
                             self.userCount(countUsers(data));
+                        },
+                        error: function (e) {
+                            console.log(e);
                         }
                     });
-                }
+                };
 
-                function countUsers(data) {
+                var countUsers = function(data) {
                   var count = data.root.users.length;
                   for (i = 0; i < data.root.channels.length; i++) {
                     var users = data.root.channels[i].users.length;
                     count += users;
                   }
                   return count;
-                }
+                };
 
                 // Update CVP data every 15s
                 setInterval(function() {
                     loadCvpData();
                 }, 15000);
+
+                self.cvp(loadCvpData()); // Preload cvp data
 
             }
             ko.applyBindings(new CvpViewModel());

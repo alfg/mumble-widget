@@ -77,10 +77,10 @@
 
             /******* Load HTML Template *******/
             var html = "<table class='mumble-script-widget rounded centered' data-bind='with: cvp'><thead> \
-                <tr data-bind='ifnot: $data.code'><th><a href='#' data-bind='text: name, attr: { href: x_connecturl }'></a></th></tr> \
-                <tr data-bind='if: $data.code'><th>Not Found</th></tr> \
+                <tr data-bind='if: $data.root'><th><a href='#' data-bind='text: name, attr: { href: x_connecturl }'></a></th></tr> \
+                <tr data-bind='ifnot: $data.root'><th>Not Found</th></tr> \
                 </thead><tbody> \
-                <!-- ko ifnot: $data.code --> \
+                <!-- ko if: $data.root --> \
                   <!-- ko foreach: root.users --> \
                   <tr><td data-bind='text: name'></td></tr> \
                   <!-- /ko --> \
@@ -97,7 +97,7 @@
                   <!-- /ko --> \
                 <!-- /ko --> \
                 \
-                <!-- ko if: $data.code --> \
+                <!-- ko ifnot: $data.root --> \
                 <tr><td>Unable to load</td></tr> \
                 <!-- /ko --> \
                 \
@@ -109,38 +109,43 @@
                 var self = this;
 
                 // Observables
-                self.cvp = ko.observable(loadCvpData());
+                self.cvp = ko.observable();
                 self.userCount = ko.observable();
 
+
                 // Load initial data into cvp observable, then set an interval
-                function loadCvpData() {
+                var loadCvpData = function() {
                     var data = {};
                     $.ajax({
                         url: jsonpUrl,
-                        async: false,
+                        async: true,
                         dataType: "jsonp",
                         success: function (data) {
                             console.log(data);
                             self.cvp(data);
                             self.userCount(countUsers(data));
+                        },
+                        error: function (e) {
+                            console.log(e);
                         }
                     });
-                }
+                };
 
-                function countUsers(data) {
+                var countUsers = function(data) {
                   var count = data.root.users.length;
                   for (i = 0; i < data.root.channels.length; i++) {
                     var users = data.root.channels[i].users.length;
                     count += users;
                   }
                   return count;
-                }
+                };
 
                 // Update CVP data every 15s
                 setInterval(function() {
                     loadCvpData();
                 }, 15000);
 
+                self.cvp(loadCvpData()); // Preload cvp data
             }
             ko.applyBindings(new CvpViewModel());
         });

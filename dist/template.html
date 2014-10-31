@@ -1,10 +1,10 @@
 <table class="mumble-widget rounded centered" data-bind="with: cvp">
   <thead>
-    <tr data-bind="ifnot: $data.code"><th><a href="#" data-bind="text: name, attr: { href: x_connecturl }"></a></th></tr>
-    <tr data-bind="if: $data.code"><th>Not Found</th></tr>
+    <tr data-bind="if: $data.root"><th><a href="#" data-bind="text: name, attr: { href: x_connecturl }"></a></th></tr>
+    <tr data-bind="ifnot: $data.root"><th>Not Found</th></tr>
   </thead>
   <tbody>
-    <!-- ko ifnot: $data.code -->
+    <!-- ko if: $data.root -->
       <!-- ko foreach: root.users -->
       <tr><td data-bind='text: name'></td></tr>
       <!-- /ko -->
@@ -21,7 +21,7 @@
       <!-- /ko -->
     <!-- /ko -->
 
-    <!-- ko if: $data.code -->
+    <!-- ko ifnot: $data.root -->
     <tr><td>Unable to load</td></tr>
     <!-- /ko -->
 
