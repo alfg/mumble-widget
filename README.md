@@ -13,6 +13,7 @@ The following are a list of compatible hosts implementing the [Channel Viewer Pr
 | Host  | Compatible?  | JSFiddle Demo  |
 |---|---|---|
 | [GuildBit](http://guildbit.com) | YES | http://jsfiddle.net/alfg/3m86purL/  |
+| [CleanVoice](http://cleanvoice.ru/free/mumble/) | YES | http://jsfiddle.net/alfg/8ojLfbzb/ |
 | [Mumble.com](http://www.mumble.com/)  |  YES  |  http://jsfiddle.net/alfg/z2qf81d6/ |
 | [GotMumble](http://www.gotmumble.com/)  |  YES  | http://jsfiddle.net/alfg/3krr8pp1/  |
 | [TypeFrag](http://www.typefrag.com/services/mumble-hosting/)  |  ???  |   |
