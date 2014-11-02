@@ -139,7 +139,6 @@
                     count += users;
 
                     for (j = 0; j < data.root.channels[i].channels.length; j++) {
-                      console.log(data.root.channels[i].channels[j].users.length);
                       var sub_users = data.root.channels[i].channels[j].users.length;
                       count += sub_users;
                     }
