@@ -91,6 +91,14 @@
                     <!-- ko foreach: users --> \
                     <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
                     <!-- /ko --> \
+                    <!-- ko foreach: channels --> \
+                      <!-- ko if: users.length > 0 --> \
+                      <tr class='subchannels'><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
+                      <!-- /ko --> \
+                      <!-- ko foreach: users --> \
+                      <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
+                      <!-- /ko --> \
+                    <!-- /ko --> \
                   <!-- /ko --> \
                   <!-- ko if: $root.userCount() == 0 --> \
                   <tr><td>No users are online</td></tr> \
@@ -131,11 +139,18 @@
                     });
                 };
 
+                // Counts users by itering through channels and subchannels
                 var countUsers = function(data) {
                   var count = data.root.users.length;
                   for (i = 0; i < data.root.channels.length; i++) {
                     var users = data.root.channels[i].users.length;
                     count += users;
+
+                    for (j = 0; j < data.root.channels[i].channels.length; j++) {
+                      console.log(data.root.channels[i].channels[j].users.length);
+                      var sub_users = data.root.channels[i].channels[j].users.length;
+                      count += sub_users;
+                    }
                   }
                   return count;
                 };

@@ -115,6 +115,12 @@
                   for (i = 0; i < data.root.channels.length; i++) {
                     var users = data.root.channels[i].users.length;
                     count += users;
+                    
+                    for (j = 0; j < data.root.channels[i].channels.length; j++) {
+                      console.log(data.root.channels[i].channels[j].users.length);
+                      var sub_users = data.root.channels[i].channels[j].users.length;
+                      count += sub_users;
+                    }
                   }
                   return count;
                 };

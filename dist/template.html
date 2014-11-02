@@ -15,6 +15,14 @@
         <!-- ko foreach: users -->
         <tr><td data-bind="text: '&mdash; '  + name"></td></tr>
         <!-- /ko -->
+        <!-- ko foreach: channels -->
+          <!-- ko if: users.length > 0 -->
+          <tr class='subchannels'><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr>
+          <!-- /ko -->
+          <!-- ko foreach: users -->
+          <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr>
+          <!-- /ko -->
+        <!-- /ko -->
       <!-- /ko -->
       <!-- ko if: $root.userCount() == 0 -->
       <tr><td>No users are online</td></tr>
