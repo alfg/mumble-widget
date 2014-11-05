@@ -91,13 +91,7 @@
                     <!-- ko foreach: users --> \
                     <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
                     <!-- /ko --> \
-                    <!-- ko foreach: channels --> \
-                      <!-- ko if: users.length > 0 --> \
-                      <tr class='subchannels'><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
-                      <!-- /ko --> \
-                      <!-- ko foreach: users --> \
-                      <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
-                      <!-- /ko --> \
+                    <!-- ko template: {name: 'subchannels_template', foreach: $data.channels} --> \
                     <!-- /ko --> \
                   <!-- /ko --> \
                   <!-- ko if: $root.userCount() == 0 --> \
@@ -109,7 +103,16 @@
                 <tr><td>Unable to load</td></tr> \
                 <!-- /ko --> \
                 \
-                </tbody></table>";
+                </tbody></table> \
+                <script id='subchannels_template' type='text/html'> \
+                        <tr class='subchannels'><td data-bind='text: &apos;&mdash; &apos; + name, visible: users.length > 0'></td></tr> \
+                        <!-- ko foreach: users --> \
+                        <tr><td data-bind='text: '&mdash; '  + name'></td></tr> \
+                        <!-- /ko --> \
+                        <!-- ko template: {name: 'subchannels_template', foreach: $data.channels} --> \
+                        <!-- /ko --> \
+                </script>";
+
             $("#mumble-widget-container").html(html);
 
             // Knockout Users ViewModel for displaying and updating users online
@@ -119,7 +122,6 @@
                 // Observables
                 self.cvp = ko.observable();
                 self.userCount = ko.observable();
-
 
                 // Load initial data into cvp observable, then set an interval
                 var loadCvpData = function() {
@@ -139,18 +141,30 @@
                     });
                 };
 
-                // Counts users by itering through channels and subchannels
+                // Counts users by iterating through channels and subchannels
                 var countUsers = function(data) {
                   var count = data.root.users.length;
-                  for (i = 0; i < data.root.channels.length; i++) {
-                    var users = data.root.channels[i].users.length;
-                    count += users;
 
-                    for (j = 0; j < data.root.channels[i].channels.length; j++) {
-                      var sub_users = data.root.channels[i].channels[j].users.length;
-                      count += sub_users;
-                    }
-                  }
+                  // Recursive iteration function for counting users in channels
+                  var iterate = function(obj) {
+                      for (var property in obj) {
+                          if (obj.hasOwnProperty(property)) {
+                              if (typeof obj[property] === "object") {
+                                  if (property === "channels") {
+                                      for (var i = 0; i < obj[property].length; i++) {
+                                          var users = obj[property][i].users.length;
+                                          console.log(users);
+                                          count += users;
+                                      }
+                                  }
+                                iterate(obj[property]);
+                              }
+                          }
+                      }
+                  };
+
+                  iterate(data.root);
+                  console.log(count);
                   return count;
                 };
 
