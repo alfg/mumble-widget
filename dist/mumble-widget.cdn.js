@@ -153,7 +153,6 @@
                                   if (property === "channels") {
                                       for (var i = 0; i < obj[property].length; i++) {
                                           var users = obj[property][i].users.length;
-                                          console.log(users);
                                           count += users;
                                       }
                                   }
@@ -164,7 +163,6 @@
                   };
 
                   iterate(data.root);
-                  console.log(count);
                   return count;
                 };
 
