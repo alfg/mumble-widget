@@ -83,13 +83,7 @@
                     <!-- ko foreach: users --> \
                     <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
                     <!-- /ko --> \
-                    <!-- ko foreach: channels --> \
-                      <!-- ko if: users.length > 0 --> \
-                      <tr class='subchannels'><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
-                      <!-- /ko --> \
-                      <!-- ko foreach: users --> \
-                      <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
-                      <!-- /ko --> \
+                    <!-- ko template: {name: 'subchannels_template', foreach: $data.channels} --> \
                     <!-- /ko --> \
                   <!-- /ko --> \
                   <!-- ko if: $root.userCount() == 0 --> \
@@ -101,7 +95,16 @@
                 <tr><td>Unable to load</td></tr> \
                 <!-- /ko --> \
                 \
-                </tbody></table>";
+                </tbody></table> \
+                <script id='subchannels_template' type='text/html'> \
+                        <tr class='subchannels'><td data-bind='text: &apos;&mdash; &apos; + name, visible: users.length > 0'></td></tr> \
+                        <!-- ko foreach: users --> \
+                        <tr><td data-bind='text: '&mdash; '  + name'></td></tr> \
+                        <!-- /ko --> \
+                        <!-- ko template: {name: 'subchannels_template', foreach: $data.channels} --> \
+                        <!-- /ko --> \
+                </script>";
+
             $("#mumble-widget-container").html(html);
 
             // Knockout Users ViewModel for displaying and updating users online
@@ -111,7 +114,6 @@
                 // Observables
                 self.cvp = ko.observable();
                 self.userCount = ko.observable();
-
 
                 // Load initial data into cvp observable, then set an interval
                 var loadCvpData = function() {
