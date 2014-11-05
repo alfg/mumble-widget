@@ -99,7 +99,7 @@
                 <script id='subchannels_template' type='text/html'> \
                         <tr class='subchannels'><td data-bind='text: &apos;&mdash; &apos; + name, visible: users.length > 0'></td></tr> \
                         <!-- ko foreach: users --> \
-                        <tr><td data-bind='text: '&mdash; '  + name'></td></tr> \
+                        <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
                         <!-- /ko --> \
                         <!-- ko template: {name: 'subchannels_template', foreach: $data.channels} --> \
                         <!-- /ko --> \
