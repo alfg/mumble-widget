@@ -16,13 +16,13 @@ The following are a list of compatible hosts implementing the [Channel Viewer Pr
 | [CleanVoice](http://cleanvoice.ru/free/mumble/) | YES | http://jsfiddle.net/alfg/8ojLfbzb/ |
 | [Mumble.com](http://www.mumble.com/)  |  YES  |  http://jsfiddle.net/alfg/z2qf81d6/ |
 | [GotMumble](http://www.gotmumble.com/)  |  YES  | http://jsfiddle.net/alfg/3krr8pp1/  |
+| [MMO-Mumble](https://mmo-mumble.com/)  |  YES  | http://jsfiddle.net/seansummers/47eb1Lvx/ |
+| [MumbleMe](https://www.mumbleme.com/)  | YES | http://jsfiddle.net/seansummers/zfngfr0h/ |
 | [TypeFrag](http://www.typefrag.com/services/mumble-hosting/)  |  ???  |   |
 | [MumbleBoxes](https://www.mumbleboxes.com/)  |  ???  |   |
 | [MyMumble](https://www.mymumble.com/)  |  ???  |   |
 | [GameServers](https://www.gameservers.com/mumble_murmur/)  |  ???  |   |
 | [CommandChannel](https://commandchannel.com/)  |  ???  |   |
-| [MMO-Mumble](https://mmo-mumble.com/)  |  YES  | http://jsfiddle.net/seansummers/47eb1Lvx/ |
-| [MumbleMe](https://www.mumbleme.com/)  | YES | http://jsfiddle.net/seansummers/zfngfr0h/ |
 
 
 
