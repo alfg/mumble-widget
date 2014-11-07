@@ -21,8 +21,8 @@ The following are a list of compatible hosts implementing the [Channel Viewer Pr
 | [MyMumble](https://www.mymumble.com/)  |  ???  |   |
 | [GameServers](https://www.gameservers.com/mumble_murmur/)  |  ???  |   |
 | [CommandChannel](https://commandchannel.com/)  |  ???  |   |
-| [MMO-Mumble](https://mmo-mumble.com/)  |  ???  |   |
-| [MumbleMe](https://www.mumbleme.com/)  | ??? |   |
+| [MMO-Mumble](https://mmo-mumble.com/)  |  YES  | http://jsfiddle.net/seansummers/47eb1Lvx/ |
+| [MumbleMe](https://www.mumbleme.com/)  | YES | http://jsfiddle.net/seansummers/zfngfr0h/ |
 
 
 
