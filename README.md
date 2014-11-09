@@ -55,10 +55,11 @@ Self-hosted is for those who would like to have control of the source code and/o
 2. Add the following snippet where you want the widget to load: 
 
 ```html
-    <script class="mumble-widget" src="../src/mumble-widget.js" type="text/javascript"
-      data-width="400"
-      data-source="http://guildbit.com/server/cvp/aec4afa2-d777-43e9-8ca5-41bc70d00877/json/?callback=callback"></script>
-    <div id="mumble-widget-container"></div>
+<script class="mumble-widget" src="../src/mumble-widget.js" type="text/javascript"
+    data-width="400"
+    data-source="http://guildbit.com/server/cvp/aec4afa2-d777-43e9-8ca5-41bc70d00877/json/?callback=callback">
+</script>
+<div id="mumble-widget-container"></div>
 ```
 
 Parameters:
