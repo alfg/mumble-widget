@@ -34,8 +34,18 @@ There are two methods of installation, depending if you are self-hosting the scr
 
 Hosted is for those who don't necessarily want to bother setting up the script. This method is meant to be simplified and serves the files over a [Content Delivery Network (CDN)](http://en.wikipedia.org/wiki/Content_delivery_network).
 
-1. Visit http://mumble-widget.guildbit.com to generate your script.
-2. Copy and paste the code snippet into your website where you want the widget to load.
+To use the hosted version of the script, simply copy and paste the following snippet of code where you want the widget to load on your website:
+
+```
+<script class="mumble-widget"
+    src="//dqc3ygqu0f1ud.cloudfront.net/dist/mumble-widget/mumble-widget.cdn.min.js"
+    type="text/javascript"
+    data-source="CVP Endpoint here"
+    data-width="400"></script>
+<div id="mumble-widget-container"></div>
+```
+
+Just replace the `data-source` value with your CVP endpoint provided by your Mumble host and you're set!
 
 ### Self-Hosted
 
