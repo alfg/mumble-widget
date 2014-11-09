@@ -36,7 +36,7 @@ Hosted is for those who don't necessarily want to bother setting up the script. 
 
 To use the hosted version of the script, simply copy and paste the following snippet of code where you want the widget to load on your website:
 
-```
+```html
 <script class="mumble-widget"
     src="//dqc3ygqu0f1ud.cloudfront.net/dist/mumble-widget/mumble-widget.cdn.min.js"
     type="text/javascript"
