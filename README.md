@@ -40,7 +40,7 @@ To use the hosted version of the script, simply copy and paste the following sni
 <script class="mumble-widget"
     src="//dqc3ygqu0f1ud.cloudfront.net/dist/mumble-widget/mumble-widget.cdn.min.js"
     type="text/javascript"
-    data-source="CVP Endpoint here"
+    data-source="//guildbit.com/server/cvp/a1722c92-368e-4506-9ea2-22be00ca8129"
     data-width="400"></script>
 <div id="mumble-widget-container"></div>
 ```
