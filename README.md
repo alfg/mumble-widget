@@ -77,8 +77,8 @@ Mumble-widget is built with [jQuery](http://jquery.com), [Knockout.js](http://kn
 
 ## Todo
 
-- Iron out bugs and improve code + design
 - Compatibility with hosts using CVP protocol
+- Add various themes
 
 ## Notes
 
