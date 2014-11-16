@@ -48,6 +48,7 @@
             var cvpKey = $(".mumble-widget").data("key");
             var width = $(".mumble-widget").data("width") || 500;
             var host = $(".mumble-widget").data("source") || "http://guildbit.com/server/cvp/" + cvpKey + "/json/?callback=?";
+            var theme = $(".mumble-widget").data("theme") || "default";
 
             // Asset Sources
             var cssSource = "../src/mumble-widget.css";
@@ -73,7 +74,9 @@
             var html;
             $.get(tmplSource, function(data) {
               html = data;
-              $("#mumble-widget-container").html(html);
+              var $el = $("#mumble-widget-container");
+              $el.html(html);
+              $el.addClass(theme);
             });
 
             // Knockout Users ViewModel for displaying and updating users online
