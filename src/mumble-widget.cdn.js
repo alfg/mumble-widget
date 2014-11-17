@@ -45,9 +45,14 @@
     /******** Our main function ********/
     function main() {
         jQuery(document).ready(function ($) {
-            var cvpKey = $(".mumble-widget").data("key");
-            var width = $(".mumble-widget").data("width") || 500;
-            var host = $(".mumble-widget").data("source") || "//guildbit.com/server/cvp/" + cvpKey + "/json/?callback=?";
+            // Element
+            var $widget = $(".mumble-widget");
+
+            // Configuration from data-attributes
+            var cvpKey = $widget.data("key");
+            var width = $widget.data("width") || 500;
+            var host = $widget.data("source") || "//guildbit.com/server/cvp/" + cvpKey + "/json/?callback=?";
+            var theme = $widget.data("theme") || "default";
 
             // Asset Sources
             var cssSource = "//dqc3ygqu0f1ud.cloudfront.net/dist/mumble-widget/mumble-widget.min.css";
@@ -74,14 +79,14 @@
                 </thead><tbody> \
                 <!-- ko if: $data.root --> \
                   <!-- ko foreach: root.users --> \
-                  <tr><td data-bind='text: name'></td></tr> \
+                  <tr class='root-users'><td data-bind='text: name'></td></tr> \
                   <!-- /ko --> \
                   <!-- ko foreach: root.channels --> \
                     <!-- ko if: users.length > 0 --> \
                     <tr class='subchannels'><td data-bind='text: name'></td></tr> \
                     <!-- /ko --> \
                     <!-- ko foreach: users --> \
-                    <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
+                    <tr class='sub-users'><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
                     <!-- /ko --> \
                     <!-- ko template: {name: 'subchannels_template', foreach: $data.channels} --> \
                     <!-- /ko --> \
@@ -99,13 +104,14 @@
                 <script id='subchannels_template' type='text/html'> \
                         <tr class='subchannels'><td data-bind='text: &apos;&mdash; &apos; + name, visible: users.length > 0'></td></tr> \
                         <!-- ko foreach: users --> \
-                        <tr><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
+                        <tr class='sub-users'><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
                         <!-- /ko --> \
                         <!-- ko template: {name: 'subchannels_template', foreach: $data.channels} --> \
                         <!-- /ko --> \
                 </script>";
 
-            $("#mumble-widget-container").html(html);
+            $("#mumble-widget-container").html(html)
+              .addClass(theme);
 
             // Knockout Users ViewModel for displaying and updating users online
             function CvpViewModel() {

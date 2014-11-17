@@ -45,10 +45,15 @@
     /******** Our main function ********/
     function main() {
         jQuery(document).ready(function ($) {
-            var cvpKey = $(".mumble-widget").data("key");
-            var width = $(".mumble-widget").data("width") || 500;
-            var host = $(".mumble-widget").data("source") || "http://guildbit.com/server/cvp/" + cvpKey + "/json/?callback=?";
-            var theme = $(".mumble-widget").data("theme") || "default";
+
+            // Element
+            var $widget = $(".mumble-widget");
+
+            // Configuration from data-attributes
+            var cvpKey = $widget.data("key");
+            var width = $widget.data("width") || 500;
+            var host = $widget.data("source") || "//guildbit.com/server/cvp/" + cvpKey + "/json/?callback=?";
+            var theme = $widget.data("theme") || "default";
 
             // Asset Sources
             var cssSource = "../src/mumble-widget.css";

@@ -106,8 +106,12 @@
   font-weight: bold;
 }
 
+/*
+ *
+ * Themes */
 
-/* Themes - Grayscale */
+
+/* Grayscale */
 #mumble-widget-container.grayscale table {
   background-color: lightgray;
 }
@@ -118,4 +122,45 @@
 #mumble-widget-container.grayscale table thead {
   background-color: gray;
   color: #fff;
+}
+
+/* Obsidian */
+#mumble-widget-container.obsidian table {
+  border: 1px solid #22282A;
+  font-family: Consolas, Inconsolata, Monaco, monospace;
+  font-size: 10pt;
+  background-color: #ccc;
+}
+
+#mumble-widget-container.obsidian table caption {
+  text-align: center;
+  font-size: 30px;
+  padding: .75em;
+}
+
+#mumble-widget-container.obsidian table thead th,
+#mumble-widget-container.obsidian table tbody td,
+#mumble-widget-container.obsidian table tr td {
+  border-top: 1px solid #555;
+}
+
+#mumble-widget-container.obsidian table .subchannels {
+  background: #293134;
+  color: #678CB1;
+}
+
+#mumble-widget-container.obsidian table .sub-users,
+#mumble-widget-container.obsidian table .root-users {
+  background: #3F4E49;
+  color: #fff;
+}
+
+#mumble-widget-container.obsidian table thead {
+  background-color: #22282A;
+  color: #F1F2F3;
+}
+
+#mumble-widget-container.obsidian table thead a {
+  color: #93C763;
+  text-decoration: none;
 }
