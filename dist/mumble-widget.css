@@ -1,5 +1,5 @@
 /*
- *  mumble-widget - v0.1.0
+ *  mumble-widget - v0.2.0
  *  Mumble Channel Viewer Widget
  *  http://github.com/alfg/mumble-widget
  *
@@ -137,7 +137,6 @@
   font-family: Consolas, Inconsolata, Monaco, monospace;
   font-size: 10pt;
   background-color: #3F4E49;
-  border: 1px solid #22282A;
   color: #fff;
 }
 
