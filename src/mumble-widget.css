@@ -126,10 +126,10 @@
 
 /* Obsidian */
 #mumble-widget-container.obsidian table {
-  border: 1px solid #22282A;
   font-family: Consolas, Inconsolata, Monaco, monospace;
   font-size: 10pt;
-  background-color: #ccc;
+  background-color: #3F4E49;
+  color: #fff;
 }
 
 #mumble-widget-container.obsidian table caption {
