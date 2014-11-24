@@ -44,7 +44,11 @@ To use the hosted version of the script, simply copy and paste the following sni
 <div id="mumble-widget-container"></div>
 ```
 
-Just replace the `data-source` value with your CVP endpoint provided by your Mumble host and you're set!
+Parameters:
+- `data-source` - The path to the CVP JSONP Source of your Mumble hosting provider.
+- `data-width` - (optional) The width (pixels) of the widget and data.
+- `data-theme` - (optional) The theme name. See [Themes](#themes) below.
+- `data-key` - (optional) The CVP Key if using GuildBit as your Mumble Host (in this case, you do not need to include the `data-source` attribute.
 
 ### Self-Hosted
 
@@ -62,9 +66,15 @@ Self-hosted is for those who would like to have control of the source code and/o
 ```
 
 Parameters:
-- `data-width` - The width (pixels) of the widget and data
-- `data-source` - The path to the CVP JSONP Source of your Mumble hosting provider (if not using GuildBit)
-- `data-key` - (not shown) The CVP Key if using GuildBit as your Mumble Hosting (in this case, you do not need to include    the `data-source` attribute.
+- `data-source` - The path to the CVP JSONP Source of your Mumble hosting provider.
+- `data-width` - (optional) The width (pixels) of the widget and data.
+- `data-theme` - (optional) The theme name. See [Themes](#themes) below.
+- `data-key` - (optional) The CVP Key if using GuildBit as your Mumble Host (in this case, you do not need to include the `data-source` attribute.
+
+
+## Themes
+
+TODO
 
 ## Development
 
