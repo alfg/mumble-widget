@@ -74,7 +74,10 @@ Parameters:
 
 ## Themes
 
-TODO
+![Default](/demo/themes/theme_default.PNG)
+![Grayscale](/demo/themes/theme_grayscale.PNG)
+![Obsidian](/demo/themes/theme_obsidian.PNG)
+
 
 ## Development
 
