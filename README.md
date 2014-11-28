@@ -74,6 +74,10 @@ Parameters:
 
 ## Themes
 
+You can use the following themes by adding the `data-theme` attribute to the script tag. 
+
+Example: `data-theme="obsidian"`.
+
 | Default  | Grayscale  | Obsidian  |
 |---|---|---|
 | ![Default](/demo/themes/theme_default.PNG) | ![Grayscale](/demo/themes/theme_grayscale.PNG) | ![Obsidian](/demo/themes/theme_obsidian.PNG) |
