@@ -18,7 +18,7 @@ The following are a list of compatible hosts implementing the [Channel Viewer Pr
 | [GotMumble](http://www.gotmumble.com/)  |  YES  | http://jsfiddle.net/alfg/3krr8pp1/  |
 | [MMO-Mumble](https://mmo-mumble.com/)  |  YES  | http://jsfiddle.net/seansummers/47eb1Lvx/ |
 | [MumbleMe](https://www.mumbleme.com/)  | YES | http://jsfiddle.net/seansummers/zfngfr0h/ |
-| [CommandChannel](https://commandchannel.com/)  |  TESTING  | http://jsfiddle.net/alfg/2ju0678g/ |
+| [CommandChannel](https://commandchannel.com/)  |  YES  | http://jsfiddle.net/alfg/2ju0678g/ |
 | [TypeFrag](http://www.typefrag.com/services/mumble-hosting/)  |  ???  |   |
 | [MumbleBoxes](https://www.mumbleboxes.com/)  |  ???  |   |
 | [MyMumble](https://www.mymumble.com/)  |  ???  |   |
