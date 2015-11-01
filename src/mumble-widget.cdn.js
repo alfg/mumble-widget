@@ -128,6 +128,7 @@
                         url: jsonpUrl,
                         async: true,
                         dataType: "jsonp",
+                        jsonpCallback: "callback",
                         success: function (data) {
                             console.log(data);
                             self.cvp(data);
