@@ -40,7 +40,8 @@ module.exports = function(grunt) {
 		jshint: {
 			files: ["src/mumble-widget.js", "src/mumble-widget.cdn.js"],
 			options: {
-				jshintrc: ".jshintrc"
+				jshintrc: ".jshintrc",
+				reporterOutput: ""
 			}
 		},
 

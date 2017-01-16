@@ -79,14 +79,36 @@
                 </thead><tbody> \
                 <!-- ko if: $data.root --> \
                   <!-- ko foreach: root.users --> \
-                  <tr class='root-users'><td data-bind='text: name'></td></tr> \
+                  <tr class='root-users'> \
+                      <td data-bind='text: name, \
+                        css: { \
+                            &quot;mute-on&quot;: mute, \
+                            &quot;deaf-on&quot;: deaf, \
+                            &quot;self-mute-on&quot;: selfMute, \
+                            &quot;self-deaf-on&quot;: selfDeaf, \
+                            &quot;priority-speaker-on&quot;: prioritySpeaker, \
+                            &quot;recording-on&quot;: recording \
+                        }'> \
+                      </td> \
+                  </tr> \
                   <!-- /ko --> \
                   <!-- ko foreach: root.channels --> \
                     <!-- ko if: users.length > 0 --> \
                     <tr class='subchannels'><td data-bind='text: name'></td></tr> \
                     <!-- /ko --> \
                     <!-- ko foreach: users --> \
-                    <tr class='sub-users'><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
+                    <tr class='sub-users'> \
+                        <td data-bind='text: &apos;&mdash; &apos; + name, \
+                            css: { \
+                            &quot;mute-on&quot;: mute, \
+                            &quot;deaf-on&quot;: deaf, \
+                            &quot;self-mute-on&quot;: selfMute, \
+                            &quot;self-deaf-on&quot;: selfDeaf, \
+                            &quot;priority-speaker-on&quot;: prioritySpeaker, \
+                            &quot;recording-on&quot;: recording \
+                            }'> \
+                        </td> \
+                    </tr> \
                     <!-- /ko --> \
                     <!-- ko template: {name: 'subchannels_template', foreach: $data.channels} --> \
                     <!-- /ko --> \
@@ -104,7 +126,18 @@
                 <script id='subchannels_template' type='text/html'> \
                         <tr class='subchannels'><td data-bind='text: &apos;&mdash; &apos; + name, visible: users.length > 0'></td></tr> \
                         <!-- ko foreach: users --> \
-                        <tr class='sub-users'><td data-bind='text: &apos;&mdash; &apos; + name'></td></tr> \
+                        <tr class='sub-users'> \
+                            <td data-bind='text: &apos;&mdash; &apos; + name, \
+                                css: { \
+                                &quot;mute-on&quot;: mute, \
+                                &quot;deaf-on&quot;: deaf, \
+                                &quot;self-mute-on&quot;: selfMute, \
+                                &quot;self-deaf-on&quot;: selfDeaf, \
+                                &quot;priority-speaker-on&quot;: prioritySpeaker, \
+                                &quot;recording-on&quot;: recording \
+                                }'> \
+                            </td> \
+                        </tr> \
                         <!-- /ko --> \
                         <!-- ko template: {name: 'subchannels_template', foreach: $data.channels} --> \
                         <!-- /ko --> \
