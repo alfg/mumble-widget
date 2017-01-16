@@ -8,16 +8,14 @@
     <!-- ko if: $data.root -->
       <!-- ko foreach: root.users -->
       <tr class="root-users">
-          <td
-            data-bind="text: name,
-            css: {
-                'mute-on': mute,
-                'deaf-on': deaf,
-                'self-mute-on': selfMute,
-                'self-deaf-on': selfDeaf,
-                'priority-speaker-on': prioritySpeaker,
-                'recording-on': recording
-            }">
+          <td>
+            <span data-bind="text: name"></span>
+            <span data-bind="css: { 'mute-on': mute }"></span>
+            <span data-bind="css: { 'deaf-on': deaf }"></span>
+            <span data-bind="css: { 'self-mute-on': selfMute }"></span>
+            <span data-bind="css: { 'self-deaf-on': selfDeaf }"></span>
+            <span data-bind="css: { 'priority-speaker-on': prioritySpeaker }"></span>
+            <span data-bind="css: { 'recording-on': recording }"></span>
           </td>
       </tr>
       <!-- /ko -->
@@ -29,16 +27,14 @@
         <!-- /ko -->
         <!-- ko foreach: users -->
         <tr class="sub-users">
-            <td
-                data-bind="text: '&mdash; '  + name,
-                css: {
-                    'mute-on': mute,
-                    'deaf-on': deaf,
-                    'self-mute-on': selfMute,
-                    'self-deaf-on': selfDeaf,
-                    'priority-speaker-on': prioritySpeaker,
-                    'recording-on': recording
-                }">
+            <td>
+                <span data-bind="text: '&mdash; '  + name"></span>
+                <span data-bind="css: { 'mute-on': mute }"></span>
+                <span data-bind="css: { 'deaf-on': deaf }"></span>
+                <span data-bind="css: { 'self-mute-on': selfMute }"></span>
+                <span data-bind="css: { 'self-deaf-on': selfDeaf }"></span>
+                <span data-bind="css: { 'priority-speaker-on': prioritySpeaker }"></span>
+                <span data-bind="css: { 'recording-on': recording }"></span>
             </td>
         </tr>
         <!-- /ko -->
@@ -61,16 +57,14 @@
         <tr class="subchannels"><td data-bind='text: &apos;&mdash; &apos; + name, visible: users.length > 0'></td></tr>
         <!-- ko foreach: users -->
         <tr class="sub-users">
-            <td
-                data-bind="text: '&mdash; '  + name,
-                css: {
-                    'mute-on': mute,
-                    'deaf-on': deaf,
-                    'self-mute-on': selfMute,
-                    'self-deaf-on': selfDeaf,
-                    'priority-speaker-on': prioritySpeaker,
-                    'recording-on': recording
-                }">
+            <td>
+                <span data-bind="text: '&mdash; '  + name"></span>
+                <span data-bind="css: { 'mute-on': mute }"></span>
+                <span data-bind="css: { 'deaf-on': deaf }"></span>
+                <span data-bind="css: { 'self-mute-on': selfMute }"></span>
+                <span data-bind="css: { 'self-deaf-on': selfDeaf }"></span>
+                <span data-bind="css: { 'priority-speaker-on': prioritySpeaker }"></span>
+                <span data-bind="css: { 'recording-on': recording }"></span>
             </td>
         </tr>
         <!-- /ko -->
