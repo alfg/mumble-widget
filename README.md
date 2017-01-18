@@ -10,18 +10,18 @@ The following are a list of compatible hosts implementing the [Channel Viewer Pr
 
 | Host  | Compatible?  | JSFiddle Demo  |
 |---|---|---|
-| [GuildBit](http://guildbit.com) | YES | http://jsfiddle.net/alfg/3m86purL/  |
-| [CleanVoice](http://cleanvoice.ru/free/mumble/) | YES | http://jsfiddle.net/alfg/8ojLfbzb/ |
-| [Mumble.com](http://www.mumble.com/)  |  YES  |  http://jsfiddle.net/alfg/z2qf81d6/ |
-| [GotMumble](http://www.gotmumble.com/)  |  YES  | http://jsfiddle.net/alfg/3krr8pp1/  |
-| [MMO-Mumble](https://mmo-mumble.com/)  |  YES  | http://jsfiddle.net/seansummers/47eb1Lvx/ |
-| [MumbleMe](https://www.mumbleme.com/)  | YES | http://jsfiddle.net/seansummers/zfngfr0h/ |
-| [CommandChannel](https://commandchannel.com/)  |  YES  | http://jsfiddle.net/alfg/2ju0678g/ |
-| [TypeFrag](http://www.typefrag.com/services/mumble-hosting/)  |  YES  |   |
-| [CheapMumble](https://cheapmumble.com/)  |  YES  |   |
-| [MumbleBoxes](https://www.mumbleboxes.com/)  |  ???  |   |
-| [MyMumble](https://www.mymumble.com/)  |  ???  |   |
-| [GameServers](https://www.gameservers.com/mumble_murmur/)  |  ???  |   |
+| [GuildBit](http://guildbit.com) | :white_check_mark: | http://jsfiddle.net/alfg/3m86purL/  |
+| [CleanVoice](http://cleanvoice.ru/free/mumble/) | :white_check_mark: | http://jsfiddle.net/alfg/8ojLfbzb/ |
+| [Mumble.com](http://www.mumble.com/)  |  :white_check_mark:  |  http://jsfiddle.net/alfg/z2qf81d6/ |
+| [GotMumble](http://www.gotmumble.com/)  |  :white_check_mark:  | http://jsfiddle.net/alfg/3krr8pp1/  |
+| [MMO-Mumble](https://mmo-mumble.com/)  |  :white_check_mark:  | http://jsfiddle.net/seansummers/47eb1Lvx/ |
+| [MumbleMe](https://www.mumbleme.com/)  | :white_check_mark: | http://jsfiddle.net/seansummers/zfngfr0h/ |
+| [CommandChannel](https://commandchannel.com/)  |  :white_check_mark:  | http://jsfiddle.net/alfg/2ju0678g/ |
+| [TypeFrag](http://www.typefrag.com/services/mumble-hosting/)  |  :white_check_mark:  |   |
+| [CheapMumble](https://cheapmumble.com/)  |  :white_check_mark:  |   |
+| [MumbleBoxes](https://www.mumbleboxes.com/)  |  :white_medium_small_square:  |   |
+| [MyMumble](https://www.mymumble.com/)  |  :white_medium_small_square:  |   |
+| [GameServers](https://www.gameservers.com/mumble_murmur/)  |  :white_medium_small_square:  |   |
 
 ## Usage
 There are two methods of installation, depending if you are self-hosting the script or using the hosted version.
