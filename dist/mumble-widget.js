@@ -1,5 +1,5 @@
 /*
- *  mumble-widget - v0.3.0
+ *  mumble-widget - v0.3.1
  *  Mumble Channel Viewer Widget
  *  http://github.com/alfg/mumble-widget
  *
